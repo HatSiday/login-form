@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Login Form</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="form">
+        <div class="tabs">
+            <ul>
+                <li class="register-tab">Register</li>
+                <li class="login-tab">Login</li>
+            </ul>
+        </div>
+        <div class="register">
+            <div class="input-field">
+                <input type="text" class="input" placeholder="Username">
+            </div>
+            <div class="input-field">
+                <input type="text" class="input" placeholder="E-mail">
+            </div>
+            <div class="input-field">
+                <input type="password" class="input" placeholder="Password">
+            </div>
+            <div class="input-field">
+                <button value="login" class="btn">Register</button>
+            </div>
+        </div>
+        <div class="login">
+            <div class="input-field">
+                <input type="text" class="input" placeholder="E-mail">
+            </div>
+            <div class="input-field">
+                <input type="password" class="input" placeholder="Password">
+            </div>
+            <div class="input-field">
+                <button value="login" class="btn">Login</button>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+           $(".login").hide(); 
+           $(".register-tab").addClass("active");
+           $(".login-tab").click(function(){
+            $(this).addClass("active");
+            $(".register-tab").removeClass("active");
+            $(".login").show();
+            $(".register").hide(); 
+           });
+           $(".register-tab").click(function(){
+            $(this).addClass("active");
+            $(".login-tab").removeClass("active");
+            $(".login").hide();
+            $(".register").show(); 
+           });
+        });
+    </script>
+</body>
+</html>
